@@ -22,8 +22,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if "github.com" in text:
             if text.startswith("https://github.com/") and len(text.split("/")) >= 5:
                 user_states[user_id] = {"repo": text}
-                await update.message.reply_text("✅ Repository link sahi hai"
-Ab apna session ID dein:")
+                await update.message.reply_text("✅ Repository link sahi hai")
+await update.message.reply_text("Ab apna session ID dein:")
             else:
                 await update.message.reply_text("❌ Invalid GitHub repo link.")
         else:
